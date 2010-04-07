@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>17JOYS管理后台 - 网站配置</title>
+<link href="../Public/images/skin.css" rel="stylesheet" type="text/css" />
+<link href="../Public/css/17joys.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+table.admintable td.key{
+	background-color:#F6F6F6;
+	border-bottom:1px solid #E9E9E9;
+	border-right:1px solid #E9E9E9;
+	color:#666666;
+	font-weight:bold;
+	text-align:right;
+	width:140px;
+}
+.button {
+	border:1px solid #B6B3AF;
+	padding:1px 4px 0;
+	height:21px;
+}
+
+input, select {
+	border:1px solid silver;
+	font-size:13px;
+}
+input.inputbox{
+	width:280px;
+}
+span.red_font {
+	color:red;
+}
+-->
+</style>
+</head>
+<body>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="17" valign="top" background="../Public/images/mail_leftbg.gif"><img src="../Public/images/left-top-right.gif" width="17" height="29" /></td>
+    <td valign="top" background="../Public/images/content-bg.gif"><table width="100%" height="31" border="0" cellpadding="0" cellspacing="0" class="left_topbg" id="table2">
+      <tr>
+        <td height="31"><div class="titlebt">网站配置</div></td>
+      </tr>
+    </table></td>
+    <td width="16" valign="top" background="../Public/images/mail_rightbg.gif"><img src="../Public/images/nav-right-bg.gif" width="16" height="29" /></td>
+  </tr>
+  <tr>
+    <td valign="middle" background="../Public/images/mail_leftbg.gif">&nbsp;</td>
+    <td valign="top" bgcolor="#F7F8F9">
+    <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td colspan="2" valign="top">&nbsp;</td>
+        <td>&nbsp;</td>
+        <td valign="top">&nbsp;</td>
+      </tr>
+      <tr>
+      <td>
+      <div class="tip-msg ">
+                提示: 带<span class="red_font">*</span>的项目为必填信息. 		
+      </div>
+      <form action="__URL__/save" method="post">
+      <table class="admintable" id="admintable">
+		<tr>
+		<td class="key">数据库类型：<span class="red_font">*</span></td>
+		<td><input type="text" name="db_type" class="inputbox" value="{$Think.config.db_type}" /></td>
+		</tr>
+		<tr>
+		<td class="key">数据库服务器地址：<span class="red_font">*</span></td>
+		<td><input type="text" name="db_host" class="inputbox" value="{$Think.config.db_host}" /></td>
+		</tr>
+		<tr>
+		<td class="key">数据库名称：<span class="red_font">*</span></td>
+		<td><input type="text" name="db_name" class="inputbox" value="{$Think.config.db_name}" /></td>
+		</tr>
+		<tr>
+		<td class="key">数据库用户名：<span class="red_font">*</span></td>
+		<td><input type="text" name="db_user" class="inputbox" value="{$Think.config.db_user}" /></td>
+		</tr>
+		<tr>
+		<td class="key">数据库密码：<span class="red_font">*</span></td>
+		<td><input type="text" name="db_pwd" class="inputbox" value="{$Think.config.db_pwd}" /></td>
+		</tr>
+		<tr>
+		<td class="key">数据库表前缀：<span class="red_font">*</span></td>
+		<td><input type="text" name="db_prefix" class="inputbox" value="{$Think.config.db_prefix}" /></td>
+		</tr>
+		<tr>
+		<td class="key">数据库字符集：<span class="red_font">*</span></td>
+		<td><input type="text" name="db_charset" class="inputbox" value="{$Think.config.db_charset}" /></td>
+		</tr>
+		<tr>
+		<td>
+		<input type="hidden" name="file" value="config.inc.php" />
+		<input type="submit" value="保存" />
+		<input type="submit" value="应用" />
+		<input class="button" type="button" onclick="history.go(-1);" value="取消" />
+		</td>
+		</tr>
+		</table>
+      </form>
+      </td>
+      </tr>
+    </table>
+    </td>
+    <td background="../Public/images/mail_rightbg.gif">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="bottom" background="../Public/images/mail_leftbg.gif"><img src="../Public/images/buttom_left2.gif" width="17" height="17" /></td>
+    <td background="../Public/images/buttom_bgs.gif"><img src="../Public/images/buttom_bgs.gif" width="17" height="17"></td>
+    <td valign="bottom" background="../Public/images/mail_rightbg.gif"><img src="../Public/images/buttom_right2.gif" width="16" height="17" /></td>
+  </tr>
+</table>
+</body>
+</html>

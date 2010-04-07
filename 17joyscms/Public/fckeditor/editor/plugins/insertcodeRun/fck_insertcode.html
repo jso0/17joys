@@ -1,0 +1,79 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>InsertCode Properties</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta content="noindex, nofollow" name="robots">
+<link href="../common/fck_dialog_common.css" rel="stylesheet" type="text/css" />
+<script language="javascript">
+var oEditor = window.parent.InnerDialogLoaded() ;
+var FCKLang = oEditor.FCKLang ;
+var FCKInsertCode = oEditor.FCKInsertCode ;
+var fckWby=false,fckYs=false;
+
+window.onload = function ()
+{
+    oEditor.FCKLanguageManager.TranslatePage( document ) ;
+    window.parent.SetOkButton( true ) ;    
+}
+function Ok()
+{
+	var mCopy;
+	var sE = document.getElementById('icLan');
+	var sV = sE.options[sE.selectedIndex].innerHTML;
+	var hh = document.getElementById('hhao').checked;
+	var zd = document.getElementById('zheDie').checked;
+	var yy = document.getElementById('yuYan').checked;
+	var cText;
+	cText = document.getElementById('icTxt').value;
+	FCKInsertCode.Add(sE.value,sV,cText,hh,zd,yy,fckWby,fckYs);
+    return true ;
+}
+function wbychk()
+{
+  var a = document.getElementById('wby');
+  var b = document.getElementById('ys');
+  
+  document.getElementById('zheDie').disabled = a.checked;
+  document.getElementById('yuYan').disabled = a.checked;
+  document.getElementById('icLan').disabled = a.checked;
+  document.getElementById('hhao').disabled = a.checked;
+  
+  fckWby=a.checked;fckYs=b.checked;
+  b.disabled=!fckWby;
+}
+</script>
+</head>
+<body scroll="no" style="OVERFLOW: hidden;">
+<table height="100%" cellSpacing="1" cellPadding="5" width="100%" border="0">
+  <tr>
+    <td><table align="center" border="0" cellPadding="5">
+        <tr>
+          <td style="vertical-align: top;">语言</td>
+          <td><select id="icLan">
+              <option value="cpp">C/C++</option>
+              <option value="xhtml">XML/HTML</option>
+              <option value="javascript">JavaScript</option>
+              <option value="css">CSS</option>
+              <option value="csharp">C#</option>            
+              <option value="java">Java</option>
+              <option value="php">PHP</option>
+              <option value="python">Python</option>
+              <option value="ruby">Ruby</option>
+              <option value="sql">SQL</option>
+              <option value="vb">ASP/Visual Basic</option>
+            </select><input type="checkbox" name="yuYan" id="yuYan" checked="true">显示语言名称 <input type="checkbox" value="1" name="hhao" checked="true" id="hhao"/>显示行号 <input type="checkbox" value="1" name="zheDie" id="zheDie">允许折叠
+          </td>
+        </tr>
+        <tr><td></td><td>
+        <input type="checkbox" name="wby" id="wby" onclick="wbychk()">以文本域显示代码 <input type="checkbox" name="ys" id="ys" checked="true" disabled="true">有运行/选择按钮(js,html,css适用)
+        </td></tr>
+        <tr>
+          <td style="vertical-align: top;">代码</td>
+          <td><textarea id="icTxt" cols="55" rows="16" style="font-family: 'Courier New', Monospace; border: 1px solid #ccc; padding: 5px;"></textarea></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+</body>
+</html>

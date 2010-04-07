@@ -1,0 +1,30 @@
+<div class="listz fl">
+    <div class="avn fl">
+      <div class="avn1 fl glk">
+        <p>您当前位置&raquo;<a href="__APP__">首页</a>&raquo;<a href="{:U('Section/'.$article['sid'].'-'.$_GET['itemid'])}">{$article['stitle']}</a>&raquo;<a href="{:U('Category/'.$article['cid'].'-'.$_GET['itemid'])}">{$article['ctitle']}</a>&raquo;{$article['atitle']}</p>
+      </div>
+      <div class="avn2 fl">
+        <h1>{$article['atitle']}</h1>
+      </div>
+      <div class="avn3 fl"> <span>来源:17Joys</span> <span>时间:{$article['created']}</span> <span>编辑:{$article['name']}</span> <span>人气:{$article['hits']}次</span> </div>
+      <div class="avn4 fl">
+        {$article['introtext']}
+      </div>
+      <div class="avn5 fl">
+        <p class="fl">上一篇:<notempty name="prev_art['atitle']"><a href="{:U('Article/'.$prev_art['aid'].'-'.$_GET['itemid'])}">{$prev_art['atitle']}</a><else />没有了</notempty></p>
+        <p class="fr">下一篇:<notempty name="next_art['atitle']"><a href="{:U('Article/'.$next_art['aid'].'-'.$_GET['itemid'])}">{$next_art['atitle']}</a><else />没有了</notempty></p>
+      </div>
+      <div class="avn6 fl">
+      	<volist name="foot" id="row" key="k">
+        <div class="avn61 <php>echo $k%2==1?"fl":"fr";</php>">
+          <div class="avn611 fl">
+            <p>{$row['title']}</p>
+            <span>更多&raquo;</span> </div>
+          <div class="avn612 fl glk">
+            {:W($row['module'],$row)}
+          </div>
+        </div>
+        </volist>
+      </div>
+    </div>
+  </div>

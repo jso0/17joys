@@ -1,0 +1,7 @@
+<ul>
+	<volist name="milist" id="row">
+  	<eq name="row['signnum']" value="1">
+    <li><a href="{:U(parseLink($row['link'],$row['id']))}">{$row['name']}</a></li>
+    </eq>
+	</volist>
+</ul>

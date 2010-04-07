@@ -1,0 +1,69 @@
+body,td,th { font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #000000; }
+body { background-color: #FFFFFF; margin: 0 0 0 0; padding:0 0 0 0; } 
+li{ list-style-type:none; }
+ul, ol, p, h1, h2, h3, h4, dl, dt, dd { margin: 0; padding: 0; }
+.zhengti{ width:960px; margin-left:auto; margin-right:auto; }
+.fl{ float:left; display:inline; }
+.fr{ float:right; display:inline; }
+.mt5{ margin:5px 0 0 0; }
+.nobd { border:0!important; }
+/* 标题样式 */
+.nav2 a { font-size: 12px; color: #fff; font-weight:bold; padding:0 12px; border-right:1px solid #ddd; }
+.nav2 a:link { text-decoration: none; }
+.nav2 a:visited { text-decoration: none; color: #ffffff; }
+.nav2 a:hover { text-decoration: none; color: #FF3300; }
+.nav2 a:active { text-decoration: none; color: #ffffff; }
+.foot a{ font-size:12px; color:#555555; padding-left:5px;}
+.foot a:link { text-decoration: none; }
+.foot a:visited { text-decoration: none; color: #555555; }
+.foot a:hover { text-decoration: none; color: #FF3300; }
+.foot a:active { text-decoration: none; color: #555555; }
+/* tuijian */
+.iay1 a{ color:#ff3300; font-size:16px; }
+.iay1 a:link { text-decoration: none; }
+.iay1 a:visited { text-decoration: none; color: #ff3300; }
+.iay1 a:hover { text-decoration: none; color: #FF3300; }
+.iay1 a:active { text-decoration: none; color: #ff3300; }
+/* glink */
+.glk{}
+.glk a{ color:#555555; font-size:12px; }
+.glk a:link { text-decoration: none; }
+.glk a:visited { text-decoration: none; color: #555555; }
+.glk a:hover { text-decoration: none; color: #FF3300; }
+.glk a:active { text-decoration: none; color: #555555; }
+/* bai */
+a.bai:link, a.bai:visited { text-decoration: none; color: #fff; }
+a.bai:hover, a.bai:active { color: #f30; }
+/* hong */
+a.hong:link, a.hong:visited { font-size:14px; text-decoration: none; color: #ff3300; font-weight:bold; }
+a.hong:hover, a.hong:active { color: #f30; }
+/* hei */
+a.hei:link, a.hei:visited { font-size:12px; text-decoration: none; color: #000000; font-weight:bold; }
+a.hei:hover, a.hei:active { color: #f30; }
+/* dhei */
+a.dhei:link, a.dhei:visited { font-size:16px; text-decoration: none; color: #555; font-weight:bold; }
+a.dhei:hover, a.dhei:active { color: #f30; }
+/* xhei */
+a.xhei:link, a.xhei:visited { font-size:12px; text-decoration: none; color: #555; font-weight:bold; }
+a.shei:hover, a.xhei:active { color: #f30; }
+/* lv */
+a.lv:link, a.lv:visited { font-size:12px; text-decoration: none; color: #0099FF; font-weight:bold; }
+a.lv:hover, a.lv:active { color: #f30; }
+/* lista */
+.listbox1 a{ color:#0066FF; font-size:14px; }
+.listbox1 a:link { text-decoration: none; }
+.listbox1 a:visited { text-decoration: none; color: #0066FF; }
+.listbox1 a:hover { text-decoration: none; color: #FF3300; }
+.listbox1 a:active { text-decoration: none; color: #0066FF; }
+/* avne */
+.avn5 a{ font-size:14px; color:#555555; }
+.avn5 a:link { text-decoration: none; }
+.avn5 a:visited { text-decoration: none; color: #555555; }
+.avn5 a:hover { text-decoration: none; color: #FF3300; }
+.avn5 a:active { text-decoration: none; color: #555555; }
+/* avnel */
+.avn4 a{ font-size:14px; font-weight:bold; }
+.avn4 a:link { text-decoration: none; }
+.avn4 a:visited { text-decoration: none; color: #555555; }
+.avn4 a:hover { text-decoration: none; color: #FF3300; }
+.avn4 a:active { text-decoration: none; color: #555555; }

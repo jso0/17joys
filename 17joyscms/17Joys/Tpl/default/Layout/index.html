@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$Think.config.sitename}</title>
+<meta name="keywords" content="{$Think.config.metakeys}" />
+<meta name="description" content="{$Think.config.metadesc}" />
+<meta name="generator" content="17Joys! 1.0 - Open Source Content Management" />
+<link href="../Public/css/main.css" rel="stylesheet" type="text/css" />
+<link href="../Public/css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Public/js/huan.js"></script>
+</head>
+<body>
+<div class="zhengti">
+  <!-- top -->
+  <div class="top fl">
+    <div class="toplogo fl">
+      <h1><a href="http://www.17joys.com" target="_blank">17joys</a></h1>
+    </div>
+    <div class="top1 fl">
+      <div class="top1_1 fl">
+        <input name="keyword" type="text" id="keyword" class="kw1" value=""/>
+        <select name="searchtype" id="searchtype" class="kw3" style='width:120px'>
+          <option value="titlekeyword">内容搜索</option>
+          <option value="title">主题搜索</option>
+        </select>
+        <input name="imageField" type="submit" class="kw2" value="" />
+      </div>
+    </div>
+    <div class="top2 fl">
+      <iframe width="296" scrolling="no" height="60" frameborder="0" src="../Public/ad/topad.html"></iframe>
+    </div>
+  </div>
+  <!-- top -->
+  <div></div>
+  <!-- nav -->
+  <div class="nav fl">
+    <div class="nav1 fl"></div>
+    <div class="nav2 fl">
+		
+        <volist name="top" id="row">
+		{:W($row['module'],$row)}
+		</volist>
+		<li><a class="nobd" href="http://www.17joys.com">17Joys官网</a></li>
+    </div>
+    
+    <div class="nav3 fl"></div>
+  </div>
+  <!-- nav -->
+  <div></div>
+  <!-- tops -->
+  <div class="tops fl">
+    <p>17Joys一款基于PHP技术开发，使用ThinkPHP开源框架为基础建立的CMS内容管理系统。
+</p>
+  </div>
+  <!-- tops -->
+  <div></div>
+   <!-- ad -->
+  <div class="list fl"><iframe width="960" scrolling="no" height="90" frameborder="0" src="../Public/ad/quanding.html"></iframe></div>
+  <!-- ad -->
+  <div></div>
+  <!-- ia -->
+  <layout name="$content" />
+  <!-- ia -->
+  <div></div>
+  <!-- iy -->
+  <div class="iy fr">
+  
+    <volist name="right" id="row">
+		{:W($row['module'],$row)}
+		<div style="height:10px;">&nbsp;</div>
+	</volist>
+	
+  </div>
+  <!-- iy -->
+  <div></div>
+  <!-- dibu -->
+  <div class="adb fl mt5">
+    <div class="adb1 fl"></div>
+    <div class="adb2 fl">
+      <div class="adb21 fl">
+        <p>友情链接 Links</p>
+      </div>
+      <div class="adb22 fl glk">
+        <p><a href="http://www.17joys.com">17Joys</a></p>
+        <p><a href="http://www.17joys.com/Section-1-17.html">17Joys教程</a></p>
+        <p><a href="http://www.17joys.com/Section-2-18.html">17Joys培训</a></p>
+        <p><a href="http://www.17joys.com/bbs">17Joys论坛</a></p>
+        <p><a href="http://www.17joys.com/php">17Joys教研室</a></p>
+      </div>
+    </div>
+    <div class="adb3 fl"></div>
+  </div>
+  <!-- dibu -->
+  <div></div>
+  <!-- foot -->
+  <div class="foot fl mt5">
+    <p><a href="http://www.17joys.com/" target="_blank">17Joys</a><a href="http://www.17joys.com/about.html" target="_blank">关于我们</a><a href="http://www.17joys.com/bbs/register.php" target="_blank">会员注册</a><a href="http://www.17joys.com/contact.html" target="_blank">联系我们</a><a href="http://www.17joys.com/map.html" target="_blank">网站地图</a><a href="#">加入收藏</a></p>
+    <p>Copyright &copy;<a href="http://www.17joys.com" target="_blank">17Joys</a> 2009-2010 <a href="http://www.17joys.com" target="_blank">17joys.com</a> All Rights Reserved. </p>
+  </div>
+  <!-- foot -->
+</div>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>17JOYS管理后台 - 应用授权</title>
+<link href="../Public/images/skin.css" rel="stylesheet" type="text/css" />
+<link href="../Public/css/17joys.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Public/js/jquery-1.3.2.min"></script>
+<script type="text/javascript">
+function findNode(){
+	alert('hello');
+}
+</script>
+<style type="text/css">
+<!--
+table.admintable td.key{
+	background-color:#F6F6F6;
+	border-bottom:1px solid #E9E9E9;
+	border-right:1px solid #E9E9E9;
+	color:#666666;
+	font-weight:bold;
+	text-align:right;
+	width:140px;
+}
+.button {
+	border:1px solid #B6B3AF;
+	padding:1px 4px 0;
+	height:21px;
+}
+
+input, select {
+	border:1px solid silver;
+	font-size:13px;
+}
+input.inputbox{
+	width:180px;
+}
+span.red_font {
+	color:red;
+}
+-->
+</style>
+</head>
+<body>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="17" valign="top" background="../Public/images/mail_leftbg.gif"><img src="../Public/images/left-top-right.gif" width="17" height="29" /></td>
+    <td valign="top" background="../Public/images/content-bg.gif"><table width="100%" height="31" border="0" cellpadding="0" cellspacing="0" class="left_topbg" id="table2">
+      <tr>
+        <td height="31"><div class="titlebt">应用授权</div></td>
+      </tr>
+    </table></td>
+    <td width="16" valign="top" background="../Public/images/mail_rightbg.gif"><img src="../Public/images/nav-right-bg.gif" width="16" height="29" /></td>
+  </tr>
+  <tr>
+    <td valign="middle" background="../Public/images/mail_leftbg.gif">&nbsp;</td>
+    <td valign="top" bgcolor="#F7F8F9">
+    <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td colspan="2" valign="top">&nbsp;</td>
+        <td>&nbsp;</td>
+        <td valign="top">&nbsp;</td>
+      </tr>
+      <tr>
+      <td>
+      <div class="tip-msg ">
+      <a href="__URL__/index/rid/{$_GET['rid']}/level/1">应用授权</a>
+      <a href="__URL__/index/rid/{$_GET['rid']}/level/2">功能控制授权</a>
+      <a href="__URL__/index/rid/{$_GET['rid']}/level/3">操作授权</a>
+      <br />
+                提示: 带<span class="red_font">*</span>的项目为必填信息. 		
+      </div>
+      <form action="__URL__/insert" method="post">
+      	<table class="admintable" id="admintable">
+      	<tr>
+		<td class="key">用户组：<span class="red_font">*</span></td>
+		<td>
+		<select name="role_id" onchange="location.href='?rid='+this.options[this.selectedIndex].value;">
+		<volist name="rlist" id="role">
+		<option value="{$role['id']}" <eq name="role['id']" value="$_GET['rid']">selected="selected"</eq>>{$role['name']}</option>
+		</volist>
+		</select>
+		</td>
+		</tr>
+		<gt name="_GET['level']" value="1">
+		<tr>
+		<td class="key">授权应用：<span class="red_font">*</span></td>
+		<td>
+		<select onchange="findNode();">
+		<option selected="selected">选择应用</option>
+		<volist name="level1" id="node">
+		<option value="{$node['id']}">{$node['title']}</option>
+		</volist>
+		</select>
+		</td>
+		</tr>
+		</gt>
+		<gt name="_GET['level']" value="2">
+		<tr>
+		<td class="key">授权功能：<span class="red_font">*</span></td>
+		<td>
+		<select onchange="findNode();">
+		<option selected="selected">选择功能</option>
+		</select>
+		</td>
+		</tr>
+		</gt>
+		<tr>
+		<td class="key" valign="top">授权：<span class="red_font">*</span></td>
+		<td>
+		<select name="node_id" size="10" multiple="multiple" style="width:100%;">
+		<volist name="nlist" id="node">
+		<option value="{$node['id']}"
+		<php>
+		foreach($alist as $access){
+			if($node['id']==$access['node_id'])
+				echo 'selected="selected"';
+		}
+		</php>
+		>{$node['title']}</option>
+		</volist>
+		</select>
+		</td>
+		</tr>
+		<tr>
+		<td>
+		<input class="button" type="submit" value="保存" />
+		<input class="button" type="submit" value="应用" />
+		<input class="button" type="button" onclick="history.go(-1);" value="取消" />
+		</td>
+		</tr>
+		</table>
+      </form>
+      </td>
+      </tr>
+    </table>
+    </td>
+    <td background="../Public/images/mail_rightbg.gif">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="bottom" background="../Public/images/mail_leftbg.gif"><img src="../Public/images/buttom_left2.gif" width="17" height="17" /></td>
+    <td background="../Public/images/buttom_bgs.gif"><img src="../Public/images/buttom_bgs.gif" width="17" height="17"></td>
+    <td valign="bottom" background="../Public/images/mail_rightbg.gif"><img src="../Public/images/buttom_right2.gif" width="16" height="17" /></td>
+  </tr>
+</table>
+</body>
+</html>
