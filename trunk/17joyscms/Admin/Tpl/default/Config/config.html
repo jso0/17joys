@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>17JOYS管理后台 - 网站配置</title>
+<link href="../Public/images/skin.css" rel="stylesheet" type="text/css" />
+<link href="../Public/css/17joys.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+table.admintable td.key{
+	background-color:#F6F6F6;
+	border-bottom:1px solid #E9E9E9;
+	border-right:1px solid #E9E9E9;
+	color:#666666;
+	font-weight:bold;
+	text-align:right;
+	width:140px;
+}
+.button {
+	border:1px solid #B6B3AF;
+	padding:1px 4px 0;
+	height:21px;
+}
+
+input, select {
+	border:1px solid silver;
+	font-size:13px;
+}
+input.inputbox{
+	width:280px;
+}
+span.red_font {
+	color:red;
+}
+-->
+</style>
+</head>
+<body>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="17" valign="top" background="../Public/images/mail_leftbg.gif"><img src="../Public/images/left-top-right.gif" width="17" height="29" /></td>
+    <td valign="top" background="../Public/images/content-bg.gif"><table width="100%" height="31" border="0" cellpadding="0" cellspacing="0" class="left_topbg" id="table2">
+      <tr>
+        <td height="31"><div class="titlebt">网站配置</div></td>
+      </tr>
+    </table></td>
+    <td width="16" valign="top" background="../Public/images/mail_rightbg.gif"><img src="../Public/images/nav-right-bg.gif" width="16" height="29" /></td>
+  </tr>
+  <tr>
+    <td valign="middle" background="../Public/images/mail_leftbg.gif">&nbsp;</td>
+    <td valign="top" bgcolor="#F7F8F9">
+    <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td colspan="2" valign="top">&nbsp;</td>
+        <td>&nbsp;</td>
+        <td valign="top">&nbsp;</td>
+      </tr>
+      <tr>
+      <td>
+      <div class="tip-msg ">
+                提示: 带<span class="red_font">*</span>的项目为必填信息. 		
+      </div>
+      <form action="__URL__/save" method="post">
+      <table class="admintable" id="admintable">
+      	<tr>
+		<td class="key">网站名称：<span class="red_font">*</span></td>
+		<td><input type="text" name="sitename" class="inputbox" value="{$Think.config.sitename}" /></td>
+		</tr>
+		<tr>
+		<td class="key">网站关键词：<span class="red_font">*</span></td>
+		<td><input type="text" name="metakeys" class="inputbox" value="{$Think.config.metakeys}" /></td>
+		</tr>
+		<tr>
+		<td class="key" valign="top">网站简介：<span class="red_font">*</span></td>
+		<td><textarea name="metadesc" rows="5" cols="50">{$Think.config.metadesc}</textarea></td>
+		</tr>
+		<tr>
+		<td class="key">分页数据显示长度：<span class="red_font">*</span></td>
+		<td><input type="text" name="pagesize" class="inputbox" value="{$Think.config.pagesize}" /></td>
+		</tr>
+		<tr>
+		<td class="key">网站联系邮箱：<span class="red_font">*</span></td>
+		<td><input type="text" name="email" class="inputbox" value="{$Think.config.email}" /></td>
+		</tr>
+		<tr>
+		<td class="key">联系人：<span class="red_font">*</span></td>
+		<td><input type="text" name="contact" class="inputbox" value="{$Think.config.contact}" /></td>
+		</tr>
+		<tr>
+		<td class="key">公司名称：<span class="red_font">*</span></td>
+		<td><input type="text" name="company" class="inputbox" value="{$Think.config.company}" /></td>
+		</tr>
+		<tr>
+		<td class="key">联系电话：<span class="red_font">*</span></td>
+		<td><input type="text" name="phone" class="inputbox" value="{$Think.config.phone}" /></td>
+		</tr>
+		<tr>
+		<td class="key">传真：<span class="red_font">*</span></td>
+		<td><input type="text" name="fax" class="inputbox" value="{$Think.config.fax}" /></td>
+		</tr>
+		<tr>
+		<td class="key">地址：<span class="red_font">*</span></td>
+		<td><input type="text" name="address" class="inputbox" value="{$Think.config.address}" /></td>
+		</tr>
+		<tr>
+		<td class="key">网站关闭：<span class="red_font">*</span></td>
+		<td>否<input type="radio" name="offline" value="0" <eq name="Think.config.offline" value="0">checked="checked"</eq> />
+			是<input type="radio" name="offline" value="1" <eq name="Think.config.offline" value="1">checked="checked"</eq> />
+		</td>
+		</tr>
+		<tr>
+		<td class="key">网站关闭理由：<span class="red_font">*</span></td>
+		<td><textarea name="offlinemessage" rows="5" cols="50">{$Think.config.offlinemessage}</textarea></td>
+		</tr>
+		<tr>
+		<td>
+		<input type="hidden" name="file" value="siteconfig.inc.php" />
+		<input type="submit" value="保存" />
+		<input type="submit" value="应用" />
+		<input class="button" type="button" onclick="history.go(-1);" value="取消" />
+		</td>
+		</tr>
+		</table>
+      </form>
+      </td>
+      </tr>
+    </table>
+    </td>
+    <td background="../Public/images/mail_rightbg.gif">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="bottom" background="../Public/images/mail_leftbg.gif"><img src="../Public/images/buttom_left2.gif" width="17" height="17" /></td>
+    <td background="../Public/images/buttom_bgs.gif"><img src="../Public/images/buttom_bgs.gif" width="17" height="17"></td>
+    <td valign="bottom" background="../Public/images/mail_rightbg.gif"><img src="../Public/images/buttom_right2.gif" width="16" height="17" /></td>
+  </tr>
+</table>
+</body>
+</html>

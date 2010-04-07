@@ -1,0 +1,20 @@
+<div class="iy1 fl">
+      <div class="iy11 fl">
+        <p>{$title}</p>
+        <span><a class="bai" href="#">更多</a>&raquo;</span> 
+      </div>
+      <div class="iy12 fl glk">
+        <ul>
+        <volist name="milist" id="row">
+          <li style="margin-left:{$row['marginnum']}px">
+          <php>
+      		if($row['signnum']>1){
+      			echo "|--";
+      		}
+      	  </php>
+          	<a href="{:U(parseLink($row['link'],$row['id']))}">{$row['name']}</a>
+          </li>
+		</volist>
+        </ul>
+     </div>
+</div>

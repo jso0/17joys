@@ -1,0 +1,114 @@
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color: #EEF2FB;
+	font-size: 13px;
+}
+body, td, th {
+	font-family:Arial,Helvetica,sans-serif;
+}
+table.adminlist{
+	background-color:#E7E7E7;
+	border-spacing:1px;
+	color:#666666;
+	width:100%;
+}
+table.adminlist td, table.adminlist th {
+	padding:4px;
+}
+table.adminlist thead th {
+	background:#F0F0F0 none repeat scroll 0 0;
+	border-bottom:1px solid #999999;
+	border-left:1px solid #FFFFFF;
+	color:#666666;
+	text-align:center;
+}
+table.adminlist tbody tr {
+	background-color:#FFFFFF;
+	text-align:left;
+}
+table.adminlist tbody tr td {
+	background:#FFFFFF none repeat scroll 0 0;
+	border:1px solid #FFFFFF;
+	height:25px;
+}
+a:link, a:visited {
+	color:#0B55C4;
+	text-decoration:none;
+}
+
+a, img {
+	margin:0;
+	padding:0;
+}
+
+table.adminlist tfoot tr {
+	color:#333333;
+	text-align:center;
+}
+.container {
+	clear:both;
+	text-decoration:none;
+}
+table.adminlist .pagination {
+	display:table;
+	margin:0 auto;
+	padding:0;
+}
+.pagination div.limit {
+	float:left;
+	height:22px;
+	line-height:22px;
+	margin:0 10px;
+}
+input, select {
+	border:1px solid silver;
+	font-size:10px;
+}
+
+table.toolbar {
+	border-collapse:collapse;
+	margin:0;
+	padding:0;
+}
+table.toolbar td {
+	color:#666666;
+	height:48px;
+	padding:1px 1px 1px 4px;
+	text-align:center;
+}
+table.toolbar td.search {
+	text-align:left;
+}
+table.toolbar span {
+	display:block;
+	float:none;
+	height:32px;
+	margin:0 auto;
+	width:32px;
+}
+table.toolbar a {
+	cursor:pointer;
+	display:block;
+	float:left;
+	padding:0px 5px;
+	white-space:nowrap;
+}
+/*
+.icon-new {
+background-image:url(../images/toolbar/icon-new.png);
+}
+.icon-edit {
+background-image:url(../images/toolbar/icon-edit.png);
+}
+.icon-delete {
+background-image:url(../images/toolbar/icon-delete.png);
+}
+.icon-help {
+background-image:url(../images/toolbar/icon-help.png);
+}
+*/
+
+

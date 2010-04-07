@@ -1,0 +1,124 @@
+.top{ width:960px; height:90px; }
+.toplogo{ width:200px; height:60px; margin:15px 0 0 0; background:url(../img/linux_bg.jpg) -21px 0 no-repeat; overflow:hidden; }
+.toplogo h1{ width:200px; height:60px; text-indent:5000em; }
+.toplogo a{ display:block; width:200px; height:60px;}
+.top1{ width:444px; height:60px; margin:15px 0 0 10px; }
+.top1_1{ width:444px; height:40px; margin:10px 0 0 0; background:url(../img/linux_bg.jpg) -21px -68px no-repeat; overflow:hidden; }
+.kw1{ border:1px solid #0082D6; display:inline; float:left; height:18px; margin:7px 0 0 20px; width:170px;}
+.kw3{ display:inline; float:left; height:22px; margin:7px 0 0 5px;}
+.kw2{ display:inline; float:right; margin:8px 25px 0 0; width:73px; height:19px; background:url(../img/linux_bg.jpg) -231px 0 no-repeat; overflow:hidden; border:0; }
+.top2{ width:296px; height:60px; background-color:#996633; margin:15px 0 0 10px; }
+.nav{ width:960px; height:36px; margin:0; }
+.nav1{ width:6px; height:36px; background:url(../img/linux_bg.jpg) 0 0 no-repeat; overflow:hidden; }
+.nav2{ width:948px; height:36px; background:url(../img/linux_bg.jpg) 0 -122px repeat-x; overflow:hidden; }
+.nav2 ul{ margin:0; padding:0 0 0 0; }
+.nav2 li{ padding:11px 0; margin:0; float:left; display:inline; }
+.nav3{ width:6px; height:36px; background:url(../img/linux_bg.jpg) 0 -72px no-repeat; overflow:hidden; }
+.tops{ width:960px; height:23px; background-color:#EBF4FD; margin:0 0 0 0; }
+.tops p{ color:#FF6801; line-height:23px; margin:0 0 0 0; padding-left:10px; }
+/* 首页开始 */
+.ia{ width:736px; margin:5px 0 0 0;}
+.iaz{ width:300px; height:290px; margin:0 0 0 0; }
+.ia1{ width:300px; height:170px; position:relative; }
+.ia1sw{ width:300px; height:170px; background:url(../img/hd_bg.gif); position:absolute; left:0; top:0; z-index:15; }
+.ia1sw1{ width:300px; height:170px; }
+.ia1sw2{ width:300px; height:170px; background:#FFFFFF; position:relative; }
+.ia1sw2 img{ width:300px; height:170px; border:0px; }
+.ia2sw3{ bottom:11px; position:absolute; right:0; width:160px; z-index:50; }
+.ia2sw4{ display:block; opacity:1; visibility:visible; }
+/* slider */
+.sliderwrapper{ width: 300px; height: 170px; background:#fff; position:relative; }
+
+.sliderwrapper .contentdiv { visibility: hidden; /*leave as is*/ position: absolute; /*leave as is*/ -moz-opacity: 1; opacity: 1; z-index:5; }
+ .contentdiv img { width:300px; height:170px; border:0px; }
+ 
+.pagination { width: 160px; position:absolute; right:0; bottom:11px; z-index:50; }
+
+.pagination a:link, .pagination a:visited { float:left; width:20px; height:15px; padding: 1px; border:1px solid #ccc; text-decoration: none; text-align:center; color:#fff; margin:0 5px 0 0; }
+
+.pagination a:hover, .pagination a.selected { color:#f60; font-size:13px; text-decoration:none; font-weight:bold; border:1px solid #f90; }
+
+.anotherclass { }
+.ia2{ width:300px; height:115px; margin:5px 0 0 0; background:url(../img/linux_bg.jpg) 0 -348px no-repeat; overflow:hidden; }
+.ia2 h2{ line-height:20px; font-size:12px; color:#86CD19; margin:0 0 0 0; font-weight:bold; height:20px; width:60px; padding-left:10px; }
+.ia21{ width:290px; height:88px; margin:0 0 0 5px; }
+.ia21 p{ line-height:20px; margin:0 0 0 0; float:left; display:inline; padding-left:5px; }
+.iay{ width:426px; height:290px; background:url(../img/linux_bg1.jpg) 0 0 no-repeat; overflow:hidden; }
+.iay1{ width:416px; height:79px; border-bottom:1px solid #2e8bd0; margin:5px 0 0 4px; }
+.iay1 h1{ width:416px; height:30px; line-height:30px; font-size:16px; font-weight:bold; color:#FF3300; text-align:center; margin:0 0 0 0; }
+.iay1 p{ text-indent:24px; font-size:12px; color:#555555; line-height:20px; margin:0 0 0 0; width:416px; height:39px; overflow:hidden; }
+.iay2{ width:416px; height:195px; margin:5px 0 0 4px; }
+.iay2 ul{ margin:0 0 0 0; padding:0 0 0 0; }
+.iay2 li{ width:45%; height:21px; line-height:21px; margin:0 0 0 0; padding-left:15px; background:url(../img/linux_bg.jpg) -225px -22px no-repeat; float:left; display:inline; }
+.adin1{ width:736px; height:90px; }
+.iaq1{ width:736px; height:178px;}
+.iaq11{ width:736px; height:22px; border-bottom:2px solid #1E8FED; }
+.iaq11 p{ line-height:22px; margin:0 0 0 0; color:#87CC19; padding-left:5px; font-weight:bold; }
+.iaq12{ width:736px; height:154px; margin: 0 0 0 0; }
+.iaq12 ul{ margin:0 0 0 0; padding:0 0 0 0; }
+.iaq12 li{ background:url(../img/linux_bg.jpg) -319px 10px no-repeat; padding-left:10px; line-height:25px; float:left; display:inline; width:235px; margin:0 0 0 0; }
+.iy{ width:214px; margin:5px 0 0 0; }
+.iy1{ width:214px; height:290px; }
+.iy11{ width:214px; height:29px; background:url(../img/linux_bg.jpg) 0 -472px no-repeat; overflow:hidden; }
+.iy11 p{ line-height:29px; margin:0 0 0 0; padding-left:5px; font-weight:bold; color:#FFFFFF; float:left; display:inline; }
+.iy11 span{ line-height:29px; margin:0 0 0 0; padding-right:5px; color:#FFFFFF; float:right; display:inline; }
+.iy12{ width:212px; height:260px; border-bottom:1px solid #2B8AE4; border-right:1px solid #2B8AE4; border-left:1px solid #2B8AE4;}
+.iy12 ul{ margin:0 0 0 0; padding:0 0 0 0; }
+.iy12 li{ line-height:20px; margin:0 0 0 0; padding-left:10px; background:url(../img/linux_bg.jpg) -225px -22px no-repeat; }
+.adin2{ width:214px; height:90px; background-color:#993333; }
+.iy3{ width:212px; height:182px; border-bottom:1px solid #2B8AE4; border-right:1px solid #2B8AE4; border-left:1px solid #2B8AE4; }
+.iy3 ul{ margin:0 0 0 0; padding:0 0 0 0; }
+.iy3 li{ line-height:20px; margin:0 0 0 0; padding-left:10px; background:url(../img/linux_bg.jpg) -225px -22px no-repeat; }
+/*dibu*/
+.adb{ width:960px; height:100px; }
+.adb1{ width:19px; height:100px; background:url(../img/linux_bg.jpg) 0 -501px no-repeat; }
+.adb2{ width:922px; height:100px; background:url(../img/linux_bg1.jpg) 0 -289px repeat-x; }
+.adb21{ width:100px; height:20px; background-color:#ffffff; line-height:20px; }
+.adb21 p{ line-height:20px; height:20px; margin:0 0 0 0; color:#87CC19; font-weight:bold; padding-left:5px; }
+.adb22{ width:900px; height:50px; margin:10px 0 0 10px; }
+.adb22 p{ display:inline; font-size:12px; line-height:20px; padding:0 5px; float:left; }
+.adb3{ width:19px; height:100px; background:url(../img/linux_bg.jpg) -20px -501px no-repeat; }
+.foot{ width:960px; height:50px; border-top:1px solid #0099FF; }
+.foot p{ width:960px; height:25px; text-align:center; line-height:25px; color:#555555; margin:0 0 0 0; }
+/* 列表页开始 */
+.list{ width:960px; height:90px; background-color:#996600; }
+.listz{ width:700px; margin:0 0 0 0; }
+.listz1{ width:700px; border-bottom:2px solid #0099FF; height:25px; margin:0 0 0 0; }
+.listz1 p{ line-height:25px; color:#555555; margin:0 0 0 0; }
+.listbox{ width:698px; height:104px; border-bottom:1px solid #CCCCCC; border-left:1px solid #CCCCCC; border-right:1px solid #CCCCCC; }
+.listbox1{ width:698px; height:25px; margin:0 0 0 0; }
+.listbox1 h1{ line-height:25px; font-size:14px; font-weight:bold; color:#0066FF; margin:0 0 0 0; float:left; display:inline; padding-left:5px; }
+.listbox1 span{ float:right; display:inline; color:#555555; line-height:25px; padding-right:5px; }
+.listbox2{ width:698px; height:79px; margin:0 0 0 0; overflow:hidden; }
+.listbox2 p{ color:#555555; line-height:22px; margin:0 0 0 0; text-indent:24px; font-size:12px; padding:2px 5px; }
+.listfen{ width:698px; height:26px; border-bottom:1px solid #CCCCCC; border-left:1px solid #CCCCCC; border-right:1px solid #CCCCCC; margin:0 0 0 0; }
+.listfen1{ float:left; line-height:17px; margin-bottom:3px; padding-bottom:3px; padding-top:3px; }
+.listfen1 a{ background:#FFFFFF none repeat scroll 0 50%; border:1px solid #DDDDDD; color:#000000; display:block; float:left; height:17px; margin-bottom:2px; margin-right:2px; padding-left:8px; padding-right:8px; text-decoration:none;}
+.listfen1 strong{ background:#FF6600 none repeat scroll 0 50%; border:1px solid #CC3333; color:#FFFFFF; display:block; float:left; margin:0 3px 0 0;padding-left:8px; padding-right:8px; }
+.listy{ width:250px; margin:25px 0 0 0; }
+.listy1{ width:250px; height:250px; background-color:#996600; }
+.listy2{ width:250px; height:60px; }
+/* 文章页 */
+.avn{ width:698px; border:1px solid #2A82E3; }
+.avn1{ width:678px; border-bottom:1px solid #CCCCCC; height:25px; margin:0 0 0 10px; }
+.avn1 p{ line-height:25px; color:#555555; margin:0 0 0 0;}
+.avn2{ width:678px; height:50px; margin:0 0 0 10px; }
+.avn2 h1{ line-height:50px; margin:0 0 0 0; text-align:center; font-size:24px; font-weight:bold; color:#555555; }
+.avn3{ width:678px; height:25px; background:url(../img/linux_bg1.jpg) 0 -404px no-repeat; overflow:hidden; margin:0 0 0 10px; text-align:center; }
+.avn3 span{ padding-left:10px; color:#555555; line-height:25px; }
+.avn4{ width:678px; margin:0 0 0 10px; }
+.avn4 p{ line-height:28px; font-size:14px; color:#555555; margin:0 0 0 0; text-indent:28px; padding:5px 5px; }
+.avn5{ width:678px; height:50px; border-bottom:1px dotted #CCCCCC; border-top:1px dotted #CCCCCC; margin:0 0 0 10px; }
+.avn5 p{ color:#666666; font-size:14px; line-height:20px; padding:15px 0; width:50%; height:20px; margin:0 0 0 0; }
+.avn6{ width:678px; height:260px; margin:5px 0 0 10px; }
+.avn61{ width:334px; height:250px; margin:0 0 0 0; background-color:#eee; }
+.avn611{ width:334px; height:29px; background:url(../img/linux_bg1.jpg) 0 -436px no-repeat; overflow:hidden;}
+.avn611 p{ line-height:29px; margin:0 0 0 0; padding-left:5px; font-size:12px; color:#FFFFFF; font-weight:bold; float:left; display:inline; }
+.avn611 span{ float:right; display:inline; margin:0 0 0 0; line-height:29px; padding-right:5px; font-size:12px; color:#FFFFFF; }
+.avn612{ width:332px; height:220px; border-bottom:1px solid #2B8AE4; border-right:1px solid #2B8AE4; border-left:1px solid #2B8AE4; }
+.avn612 ul{ margin:0 0 0 0; padding:0 0 0 0; }
+.avn612 li{ line-height:20px; margin:0 0 0 0; padding-left:10px; background:url(../img/linux_bg.jpg) -225px -22px no-repeat; }
+.avndu{ margin:0 0 0 0; }
+/* puls */
+.pu{ width:960px; margin:0 0 0 0;}
+.pu p{ line-height:25px; font-size:14px; margin:0 0 0 0; color:#555555; text-indent:24px; }

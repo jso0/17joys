@@ -1,0 +1,15 @@
+菜单名称：
+<select name="params[id]">
+<option value="0" selected="selected">-选择菜单-</option>
+<volist name="mlist" id="menu">
+	<option value="{$menu['id']}" <eq name="params['id']" value="$menu['id']">selected="selected"</eq>>{$menu['title']}</option>
+</volist>
+</select>
+<br />
+菜单显示风格：
+<select name="params[style]">
+<option value="verticalmenu" <eq name="params['style']" value="verticalmenu">selected="selected"</eq>>垂直</option>
+<option value="rankmenu" <eq name="params['style']" value="rankmenu">selected="selected"</eq>>水平</option>
+<option value="17joys" <eq name="params['style']" value="17joys">selected="selected"</eq>>17joys</option>
+</select>
+<br />

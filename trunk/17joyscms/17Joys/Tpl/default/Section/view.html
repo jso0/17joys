@@ -1,0 +1,18 @@
+  <div class="listz fl">
+    <div class="listz1 fl glk">
+      <p>您当前的位置&raquo;<a href="__APP__">首页</a>&raquo;{$section['title']}</p>
+    </div>
+    <volist name="category" id="row">
+    <div class="listbox fl">
+      <div class="listbox1 fl">
+        <h1><a href="{:U('Category/'.$row['id'].'-'.$_GET['itemid'])}">{$row['title']}</a></h1>
+        <span></span> </div>
+      <div class="listbox2 fl">
+        <p>{$row['description']}</p>
+      </div>
+    </div>
+    </volist>
+    <div class="listfen fl">
+      <div class="listfen1 fl">{$show}</div>
+    </div>
+  </div>

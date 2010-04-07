@@ -1,0 +1,183 @@
+@charset "utf-8";
+@import "tablebox.css";
+
+/*------------------------全局------------------------*/
+*{
+	padding:0px;
+	margin:0px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+html{
+	background-color: #F0F9FD;
+}
+
+body{
+	padding-top:0px;
+	padding-bottom:20px;
+	font-size:12px;
+	width:830px;
+	margin:6px auto;
+	padding-top:18px;
+	border:1px solid #DBDBDB;
+	background-color: #FFFFFF;
+}
+
+a{
+	color:#06C;
+}
+a:hover{
+	color:#F30;
+}
+
+.boxcenter{
+	margin:0px auto;
+}
+
+/*------------------------------------------------*/
+.top{
+	width:760px;
+	height:176px;
+	line-height:30px;
+	background:url(../images/logo.jpg) left center no-repeat;
+	text-indent:280px;
+	color:#888;
+}
+.top em{
+	font-weight:bold;
+	color:#FF3333;
+}
+
+.topstep{
+	width:760px;
+	/*height:35px;*/
+	overflow:hidden;
+	margin-top:10px;
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+.stepbox{
+	width:756px;
+	margin-left:4px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #3C9EDF;
+}
+.stepbox ul{
+	width:750px;
+	list-style:none;
+	margin-left: 20px;
+}
+.stepbox ul li{
+	float:left;
+	width:100px;
+	padding-top:10px;
+	height:22px;
+	font-size:14px;
+	letter-spacing:3px;
+	text-align:center;
+	margin-right: 5px;
+	font-weight: bold;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-top-color: #3C9EDF;
+	border-right-color: #3C9EDF;
+	border-left-color: #3C9EDF;
+}
+.stepbox ul li a{
+	color:#060;
+}
+.stepbox ul li.this{
+	font-weight:bold;
+	color:#FFFFFF;
+	background-color: #3DA1DD;
+	padding-top: 10px;
+}
+
+.main{
+	width:760px;
+	margin-top:10px;
+}
+
+.boxtitle{
+	width:730px;
+	height:22px;
+	margin:10px auto 0px;
+	overflow:hidden;
+}
+.boxtitle span{
+	width:158px;
+	height:22px;
+	line-height:22px;
+	overflow:hidden;
+	display:block;
+	font-size:12px;
+	padding-top:1px;
+	text-indent:10px;
+	letter-spacing:1px;
+	color:#3DA1DD;
+	font-weight: bold;
+}
+.butbox{
+	width:760px;
+	text-align:center;
+	margin-top:20px;
+}
+
+.inputButton{
+	width:104px;
+	height:34px;
+	border:1px solid #FFFFFF;
+	cursor:pointer;
+	font-weight: bold;
+	background-color: #3DA1DD;
+	font-size: 14px;
+	color: #FFFFFF;
+}
+
+
+
+
+/*----------------------- STEP 1 -------------------------*/
+.pact{
+	width:738px;
+	margin:15px auto;
+	color:#888;
+	line-height:200%;
+	/*height:380px;*/
+	overflow:auto;
+}
+.pact h4{
+	color:#666;
+	font-size:12px;
+}
+.pact p{
+	text-indent:30px;
+}
+.readpact{
+	width:760px;
+	padding-top:20px;
+	text-align:center;
+	border-top:1px solid #DDD;
+	font-size:14px;
+	letter-spacing:2px;
+}
+* html .readpact input{
+	margin:-1px 10px 2px 0px;
+}
+.readpact input[type="checkbox"]{
+	margin: -1px 10px 0 0px;
+}
+
+
+/*----------------------- STEP 4 -------------------------*/
+.setupinfo{
+	width:700px;
+	margin:20px auto;
+	font-size:14px;
+	color:#999;
+	line-height:23px;
+}

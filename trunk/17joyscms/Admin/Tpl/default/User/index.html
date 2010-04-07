@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>17JOYS管理后台 - 会员资料管理</title>
+<link href="../Public/images/skin.css" rel="stylesheet" type="text/css" />
+<link href="../Public/css/17joys.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+.icon-new {
+background-image:url(../Public/images/toolbar/icon-new.png);
+}
+.icon-edit {
+background-image:url(../Public/images/toolbar/icon-edit.png);
+}
+.icon-delete {
+background-image:url(../Public/images/toolbar/icon-delete.png);
+}
+.icon-help {
+background-image:url(../Public/images/toolbar/icon-help.png);
+}
+-->
+</style>
+</head>
+<body>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="17" valign="top" background="../Public/images/mail_leftbg.gif"><img src="../Public/images/left-top-right.gif" width="17" height="29" /></td>
+    <td valign="top" background="../Public/images/content-bg.gif"><table width="100%" height="31" border="0" cellpadding="0" cellspacing="0" class="left_topbg" id="table2">
+      <tr>
+        <td height="31"><div class="titlebt">会员管理</div></td>
+      </tr>
+    </table></td>
+    <td width="16" valign="top" background="../Public/images/mail_rightbg.gif"><img src="../Public/images/nav-right-bg.gif" width="16" height="29" /></td>
+  </tr>
+  <tr>
+    <td valign="middle" background="../Public/images/mail_leftbg.gif">&nbsp;</td>
+    <td valign="top" bgcolor="#F7F8F9">
+      <table class="toolbar" width="100%">
+    	<tr>
+    		<td width="86%" class="search">
+	    		<form action="__URL__/index" method="post">
+				筛选：<input type="text" name="keyword" />
+				<select name="ftype">
+				<option value="username">会员名</option>
+				<option value="name">昵称</option>
+				<option value="id">编号</option>
+				</select>
+				<input type="submit" value="查询" />
+				<input type="reset" value="清空" />
+	      		</form>
+		      	<script>
+		      		function del(){
+		          		if(window.confirm('请确认是否删除？')){
+		          			document.adminForm.submit();
+		          		}
+		      		}
+		      	</script>
+    		</td>
+      		<td>
+      		<a href="__URL__/add"><span class="icon-new"></span>创建</a>
+      		</td>
+      		<td>
+      		<a href="#" onclick="del();"><span class="icon-delete"></span>删除</a>
+      		</td>
+      		<td>
+      		<a href="#"><span class="icon-help"></span>帮助</a>
+      		</td>
+      	</tr>
+      </table>
+    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td colspan="2" valign="top">&nbsp;</td>
+        <td>&nbsp;</td>
+        <td valign="top">
+        <form name="adminForm" action="__URL__/delete" method="post">
+        <table class="adminlist" cellpadding="1">
+        <thead>
+      		<tr>
+      		<th style="width:2%;">#</th>
+			<th>昵称</th>
+			<th style="width:15%">登录名</th>
+			<th style="width:15%">邮箱</th>
+			<th style="width:15%">注册时间</th>
+			<th style="width:5%">启用</th>
+			<th style="width:15%">最后登录时间</th>
+			<th style="width:1%">ID</th>
+      		</tr>
+      	</thead>
+      	<tbody>
+      		<volist name="ulist" id="user" key="k">
+      		<tr>
+      		<td>
+      		<input type="checkbox" name="did[{$k}]" value="{$user['id']}" />
+      		</td>
+      		<td>
+      		<a href="__URL__/edit/id/{$user['id']}">
+      		{$user['name']}
+      		</a>
+      		</td>
+      		<td>{$user['username']}</td>
+      		<td>{$user['email']}</td>
+      		<td>{$user['reg_date']}</td>
+      		<td>
+      		<eq name="user['active']" value="1">
+      		<img width="16" height="16" border="0" alt="已启用" src="../Public/images/toolbar/p.png"/>
+      		<else />
+      		<img width="16" height="16" border="0" alt="已查封" src="../Public/images/toolbar/x.png"/>
+      		</eq>
+      		</td>
+      		<td>{$user['last_login_date']}</td>
+      		<td>{$user['id']}</td>
+      		</tr>
+      		</volist>
+      	</tbody>
+      	<tfoot>
+		<tr>
+			<td colspan="10">
+			<del class="container">
+				<div class="pagination">
+					<div class="limit">
+					每页显示数#
+					<select onchange="submitform();" size="1" class="inputbox" id="limit" name="limit">
+					<option value="5">5</option>
+					<option value="10">10</option>
+					<option value="15">15</option>
+					<option selected="selected" value="20">20</option>
+					<option value="25">25</option>
+					<option value="30">30</option>
+					<option value="50">50</option>
+					<option value="100">100</option>
+					<option value="0">所有</option>
+					</select>
+					{$show}
+					</div>
+				</div>
+			</del>				
+			</td>
+		</tr>
+		</tfoot>
+      	</table>
+      	</form>
+      	      	
+        </td>        
+      </tr>
+    </table>
+    </td>
+    <td background="../Public/images/mail_rightbg.gif">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="bottom" background="../Public/images/mail_leftbg.gif"><img src="../Public/images/buttom_left2.gif" width="17" height="17" /></td>
+    <td background="../Public/images/buttom_bgs.gif"><img src="../Public/images/buttom_bgs.gif" width="17" height="17"></td>
+    <td valign="bottom" background="../Public/images/mail_rightbg.gif"><img src="../Public/images/buttom_right2.gif" width="16" height="17" /></td>
+  </tr>
+</table>
+</body>

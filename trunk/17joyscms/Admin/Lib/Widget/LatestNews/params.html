@@ -1,0 +1,53 @@
+<script>
+      	var cat = new Array;
+      	cat[0]=new Array('-1','-1','选择文章类别');
+      	<volist name="clist" id="category" key="k">
+      	cat[{$k}]=new Array('{$category["sectionid"]}','{$category["id"]}','{$category["title"]}');
+        </volist>
+		function changeCatList(){
+			var secobj=document.getElementById('sectionid');
+			var catobj=document.getElementById('catid');
+			catobj.innerHTML="";
+			var sid=secobj.options[secobj.selectedIndex].value;
+			var j=0;
+			var opt=new Option();
+			opt.value=-1;
+			opt.text='请选择文章类别';
+			catobj.options[j++]=opt;
+			for(var i=1;i<cat.length;i++){				
+				if(cat[i][0]==sid){
+					var opt=new Option();
+					opt.value=cat[i][1];
+					opt.text=cat[i][2];
+					catobj.options[j++]=opt;
+				}
+			}			
+			if(catobj.options.length<1){
+				var opt=new Option();
+				opt.value=cat[0][1];
+				opt.text=cat[0][2];
+				catobj.options[0]=opt;
+			}
+		}
+		</script>
+
+所属单元：
+<select id="sectionid" name="params[sid]" onchange="changeCatList();">
+<option value="0" selected="selected">-选择单元-</option>
+<volist name="slist" id="section">
+	<option value="{$section['id']}">{$section['title']}</option>
+</volist>
+</select>
+		
+<br />
+所属分类：
+<select id="catid" name="params[cid]">
+	<option value="-1">请选择文章类别</option>
+</select>
+<br />
+单元显示风格：
+<select name="params[style]">
+<option value="verticalmenu">垂直</option>
+<option value="rankmenu">水平</option>
+</select>
+<br />

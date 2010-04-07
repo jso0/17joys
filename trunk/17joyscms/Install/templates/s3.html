@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>安装向导</title>
+<link href="templates/style.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+.onetd{
+	text-align:right;
+	line-height:25px;
+}
+-->
+</style>
+<script src="templates/ajax2.js" language="javascript" type="text/javascript"></script>
+<script src="templates/jquery.js" language="javascript" type="text/javascript"></script>
+<script language="javascript" type="text/javascript">
+<!--
+	$(document).ready(function(){
+		//列表第一格CSS
+		$(".twbox tr").each(function(){ $(this).children("td").eq(0).addClass("onetd");});
+		
+		//文本输入框定义CSS+鼠标悬停
+		$("input[type='text']").addClass("textipt").mouseover(function(){ $(this).addClass("textipt_on");}).mouseout(function(){$(this).removeClass("textipt_on");});
+
+		//列表行鼠标悬停
+		$(".twbox tr").mouseover(function(){ $(this).addClass("moncolor");}).mouseout(function(){$(this).removeClass("moncolor");	});
+	});
+	function $o(tid){
+		return document.getElementById(tid);
+	}
+	function TestDbPwd()
+	{
+	    var dbHost = $o('dbHost').value;
+		var dbUser = $o('dbUser').value;
+		var dbPwd = $o('dbPwd').value;
+        var dbName = $o('dbName').value;
+		var myajax = new Ajax($o('dbPwdsta'),false,true,'-','-','...');
+        myajax.SendGet2('index.php?step=10&dbHost='+dbHost+'&dbUser='+dbUser+'&dbName='+dbName+'&dbPwd='+dbPwd);
+        XHTTP = null;
+	}
+-->
+</script>
+</head>
+
+<body>
+<div class="top boxcenter"><em></em></div>
+<form action="index.php" method="post" name="form1">
+<input type="hidden" name="step" value="5" />
+<div class="topstep boxcenter">
+  <div class="stepbox">
+    <ul>
+      <li>许可协议</li>
+      <li>检测环境</li>
+      <li class="this">安装参数</li>
+      <li>开始安装</li>
+    </ul>
+  </div>
+</div>
+<div class="main boxcenter">
+		
+	<div class="boxtitle">
+		<span>数据库设定</span>
+	</div>
+	
+	<table width="726" border="0" align="center" cellpadding="0" cellspacing="0" class="twbox">
+    
+        <tr>
+            <td width="256"><strong>数据库主机：</strong></td>
+            <td width="468"><input name="dbHost" type="text" id="dbHost" value="localhost" style="width:200px" />
+            <small>(一般为localhost)</small></td>
+        </tr>
+        <tr>
+          <td><strong>数据库端口：</strong></td>
+          <td><input name="dbPort" type="text" id="dbPort" value="3306" style="width:150px" /></td>
+        </tr>
+        <tr>
+            <td><strong>数据库名称：</strong></td>
+            <td>
+                <input name="dbName" type="text" id="dbName" value="17joys" style="width:200px" />            </td>
+        </tr>
+	    <tr>
+            <td><strong>数据库用户：</strong></td>
+            <td><input name="dbUser" type="text" id="dbUser" value="root" style="width:150px" /></td>
+        </tr>
+        <tr>
+            <td><strong>数据库密码：</strong></td>
+            <td>
+            <input name="dbPwd" type="text" id="dbPwd" style="width:150px" onchange="TestDbPwd()" />
+            <span id='dbpwdsta'></span>            </td>
+        </tr>
+        <tr>
+            <td><strong>数据表前缀：</strong></td>
+            <td><input name="dbPrefix" type="text" id="dbPrefix" value="joys_" style="width:200px" />
+                    <small>(如无特殊需要,请不要修改)</small></td>
+        </tr>
+	</table>
+	
+	<div class="boxtitle">
+		<span>管理员帐号</span>
+	</div>
+	
+	<table width="726" border="0" align="center" cellpadding="0" cellspacing="0" class="twbox">
+		
+        <tr>
+            <td width="256"><strong>用户名：</strong></td>
+            <td width="468">
+                <input name="adminName" type="text" id="adminName" value="admin" style="width:200px" />
+            </td>
+        </tr>
+        <tr>
+            <td><strong>密　码：</strong></td>
+            <td><input name="adminPwd" type="text" id="adminPwd" value="admin" style="width:200px" /></td>
+        </tr>
+	</table>
+	
+	<div class="boxtitle">
+		<span>其他设置</span>
+	</div>
+	
+	<table width="726" border="0" align="center" cellpadding="0" cellspacing="0" class="twbox">
+        <tr>
+            <td width="256"><strong>网站名称：</strong></td>
+            <td width="468">
+                <input name="siteName" type="text" id="siteName" value="17Joys CMS" style="width:200px" />
+            </td>
+        </tr>
+        <tr>
+            <td width="256"><strong> 网站域名：</strong></td>
+            <td width="468"><input name="siteDomain" type="text" value="http://<?php echo $domain ?>" id="siteDomain" style="width:200px" /></td>
+        </tr>
+        <tr>
+            <td width="256"><strong>关键词(keywords)：</strong></td>
+            <td width="468">
+                <input name="siteKeywords" type="text" id="siteKeywords" value="17Joys, 17joys, CMS, 乐学PHP" style="width:200px" />
+            </td>
+        </tr>
+        <tr>
+            <td width="256"><strong> 描述(description)：</strong></td>
+            <td width="468"><textarea id="siteDescription" name="siteDescription" rows="5" cols="60" style="width:200px">17Joys!（ 17Joys! ）——乐学PHP学院是国内专业的PHP培训机构，天津最好的PHP培训机构！</textarea></td>
+        </tr>
+        <!--
+        <tr>
+            <td><strong>管理员邮箱：</strong></td>
+            <td><input name="adminmail" type="text" id="adminmail" value="admin@yourmail.com" style="width:200px" /></td>
+        </tr>
+        <tr>
+            <td><strong>安装目录：</strong></td>
+            <td><input name="rootpath" type="text" value="<?php echo $rootpath; ?>" id="rootpath" style="width:200px" />
+            <small>(在根目录安装时不必理会)</small></td>
+        </tr>
+        --> 
+	</table>
+</div>
+<div class="butbox boxcenter">
+	<input type="button" class="inputButton" value=" 上一步 " onclick="history.back();" style="margin-right:20px" />
+	<input name="提交" type="submit" class="inputButton" value=" 下一步 " />
+</div>
+</form>
+</body>
+</html>
